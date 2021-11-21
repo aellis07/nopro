@@ -31,6 +31,16 @@ inquirer.prompt(promptobj).then((response) => {
                 name: "number",
             },
         ];
+
+        inquirer.prompt(managerresponse).then(() => {
+            const newEmployeePrompt = [
+                {
+                    type: "confirm",
+                    message: "Would you like to add a new employee",
+                    name: "newEmployee",
+                },
+            ];
+        });
     }
     if (response.role == "Engineer") {
         console.log("Engineer role was selected");
