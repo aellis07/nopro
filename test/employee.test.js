@@ -7,5 +7,11 @@ describe("Employee Test", () => {
         expect(typeof newemp).toBe("object");
     });
 
-    test("Should be able to pass parameters through constructor", () => {});
+    test("Should be able to pass parameters through constructor", () => {
+        const newemp = new Employee("Anthony", 2, "fake@mail.com");
+
+        expect(newemp.name).toBe("Anthony");
+        expect(newemp.empID).toBe(2);
+        expect(newemp.email).toBe("fake@mail.com");
+    });
 });
