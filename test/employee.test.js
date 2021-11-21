@@ -14,4 +14,6 @@ describe("Employee Test", () => {
         expect(newemp.empID).toBe(2);
         expect(newemp.email).toBe("fake@mail.com");
     });
+
+    test("Should be able to get values from object", () => {});
 });
