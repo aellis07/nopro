@@ -7,4 +7,6 @@ describe("Engineer Test", () => {
 
         expect(newemp.github).toBe(githubb);
     });
+
+    test("Should be able to retrive data from subclass", () => {});
 });
