@@ -15,5 +15,11 @@ describe("Employee Test", () => {
         expect(newemp.email).toBe("fake@mail.com");
     });
 
-    test("Should be able to get values from object", () => {});
+    test("Should be able to get values from object", () => {
+        const newemp = new Employee("Anthony", 2, "fake@mail.com");
+
+        expect(newemp.getName()).toBe(newemp.name);
+        expect(newemp.getID()).toBe(newemp.empID);
+        expect(newemp.getEmail()).toBe(newemp.email);
+    });
 });
