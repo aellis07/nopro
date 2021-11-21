@@ -19,3 +19,19 @@ const promptobj = [
 
     //
 ];
+
+inquirer.prompt(promptobj).then((response) => {
+    if (response.role == "Manager") {
+        console.log("Manager role was selected");
+
+        const managerresponse = [
+            {
+                type: "number",
+                message: "What is a your office number?",
+                name: "number",
+            },
+        ];
+    }
+
+    // console.log(response);
+});
