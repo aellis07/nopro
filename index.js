@@ -32,6 +32,32 @@ inquirer.prompt(promptobj).then((response) => {
             },
         ];
     }
+    if (response.role == "Engineer") {
+        console.log("Engineer role was selected");
+
+        const engineerresponse = [
+            {
+                type: "input",
+                message: "What is a your github?",
+                name: "github",
+            },
+        ];
+
+        inquirer.prompt(engineerresponse);
+    }
+    if (response.role == "Intern") {
+        console.log("Intern role was selected");
+
+        const internresponse = [
+            {
+                type: "input",
+                message: "What school did you go to?",
+                name: "number",
+            },
+        ];
+
+        inquirer.prompt(internresponse);
+    }
 
     // console.log(response);
 });
