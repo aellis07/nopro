@@ -227,6 +227,13 @@ function generate(output, teamMembers) {
       console.log("Intern: ", employee);
     }
   }
+  teamHTML = arr.flat().join("");
+  console.log("* * * * * *" + teamHTML + "* * * * * *");
+
+  // fs.writeFileSync(filename, teamHTML, (err) => {
+  //   if (err) throw err;
+  //   console.log("file saved");
+  // });
 }
 
 mainPrompt();
