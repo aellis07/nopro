@@ -227,13 +227,51 @@ function generate(output, teamMembers) {
       console.log("Intern: ", employee);
     }
   }
-  teamHTML = arr.flat().join("");
+  // Takes newTeamArr and turns the code literal into a string
+  teamHTML = newTeamArr.flat().join("");
   console.log("* * * * * *" + teamHTML + "* * * * * *");
 
-  // fs.writeFileSync(filename, teamHTML, (err) => {
-  //   if (err) throw err;
-  //   console.log("file saved");
-  // });
+  function render() {
+    return `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Document</title>
+      </head>
+      <body>
+        <div class="jumbotron jumbotron-fluid text-center" id="header">
+          <div class="container">
+            <h1>My Team</h1>
+            <p>Employee Roster</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row"> ${teamHTML}
+          </div>
+        </div>
+      </body>
+    </html>`;
+  }
+
+  // Writes file to file location given by filename
+  fs.writeFileSync(filename, render(teamHTML), (err) => {
+    if (err) throw err;
+    console.log("file saved");
+  });
 }
 
 mainPrompt();
