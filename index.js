@@ -158,8 +158,8 @@ const generateManager = function (manager) {
           <p class="cardId">Employee ID: ${manager.empID}</p>
           <address>
             <p class="cardEmail">
-              Email: ${manager.email}
-              <a href="mailto:${manager.email}"></a>
+              Email: 
+              <a href="mailto:${manager.email}"> ${manager.email} </a>
             </p>
           </address>
           <p class="cardNumber">Office Number: ${manager.number}</p>
@@ -178,11 +178,13 @@ const generateEngineer = function (engineer) {
             <p class="cardId">Employee ID: ${engineer.empID}</p>
             <address>
               <p class="cardEmail">
-                Email: ${engineer.email}
-                <a href="mailto:${engineer.email}">  </a>
+                Email: 
+                <a href="mailto:${engineer.email}"> ${engineer.email}</a>
               </p>
             </address>
-            <p class="cardGithub">Github: ${engineer.github}</p>
+            <p class="cardGithub">Github: 
+            <a href="https://github.com/${engineer.github}">${engineer.github}</a>
+            </p>
           </div>
           </div>`;
 };
@@ -198,8 +200,8 @@ const generateIntern = function (intern) {
             <p class="cardId">Employee ID: ${intern.empID}</p>
             <address>
               <p class="cardEmail">
-                Email: ${intern.email}
-                <a href="mailto:${intern.email}"> </a>
+                Email: 
+                <a href="mailto:${intern.email}"> ${intern.email} </a>
               </p>
             </address>
             <p class="cardSchool">School: ${intern.school}</p>
