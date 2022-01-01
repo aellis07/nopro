@@ -1,10 +1,13 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+// Calling Classes
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
+// Array to store employee information
 const teamMembers = [];
+// Main prompt
 const promptobj = [
   {
     // What is your name?
@@ -267,11 +270,12 @@ function generate(output, teamMembers) {
     </html>`;
   }
 
-  // Writes file to file location given by filename
-  fs.writeFileSync(filename, render(teamHTML), (err) => {
+  // Writes file to file location given by output
+  fs.writeFileSync(output, render(teamHTML), (err) => {
     if (err) throw err;
     console.log("file saved");
   });
 }
 
+// Start program
 mainPrompt();
