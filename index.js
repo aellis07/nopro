@@ -142,4 +142,23 @@ function mainPrompt() {
     }
   });
 }
+
+//
+function generate(output, teamMembers) {
+  for (let i = 0; i < teamMembers.length; i++) {
+    const employee = teamMembers[i];
+    const role = employee.getRole();
+
+    if (role === "Manager") {
+      console.log("Managers: ", employee);
+    }
+    if (role === "Engineer") {
+      console.log("Engineers: ", employee);
+    }
+    if (role === "Intern") {
+      console.log("Intern: ", employee);
+    }
+  }
+}
+
 mainPrompt();
