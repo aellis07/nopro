@@ -25,6 +25,6 @@ describe("Engineer Test", () => {
     );
 
     expect(newemp.getGHub()).toBe(githubb);
-    expect(newemp.getPosition()).toBe("Engineer");
+    expect(newemp.getRole()).toBe("Engineer");
   });
 });

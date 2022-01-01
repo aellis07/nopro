@@ -28,6 +28,6 @@ describe("Engineer Test", () => {
     );
 
     expect(newemp.getOfficeNum()).toBe(officenum);
-    expect(newemp.getPosition()).toBe("Manager");
+    expect(newemp.getRole()).toBe("Manager");
   });
 });

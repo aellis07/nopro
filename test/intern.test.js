@@ -13,6 +13,6 @@ describe("Intern Test", () => {
     const newemp = new Intern("Anthony", "Intern", 1, "fake@mail.com", school);
 
     expect(newemp.getSchool()).toBe(school);
-    expect(newemp.getPosition()).toBe("Intern");
+    expect(newemp.getRole()).toBe("Intern");
   });
 });
